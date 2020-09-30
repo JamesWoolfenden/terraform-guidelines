@@ -1,15 +1,13 @@
-[![Slalom][logo]](https://slalom.com)
-
 # A guide
 
-[![Latest Release](https://img.shields.io/github/v/tag/slalom-consulting-ltd/terraform-guidelines.svg)](https://github.com/slalom-consulting-ltd/terraform-guidelines)
+[![Latest Release](https://img.shields.io/github/v/tag/jameswoolfenden/terraform-guidelines.svg)](https://github.com/jameswoolfenden/terraform-guidelines)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 By [James Woolfenden](https://www.linkedin.com/in/jameswoolfenden/)
 
 ## A style guide for writing Terraform
 
-This is a guide to writing Terraform to conform to Slalom London Style, it follows the Hashicorp guide to creating modules for the [Terraform Registry](https://www.terraform.io/docs/registry/modules/publish.html) and their [standard structure](https://www.terraform.io/docs/modules/index.html#standard-module-structure).
+This is a guide to writing Terraform, it follows the Hashicorp guide to creating modules for the [Terraform Registry](https://www.terraform.io/docs/registry/modules/publish.html) and their [standard structure](https://www.terraform.io/docs/modules/index.html#standard-module-structure).
 
 There are many successful ways of writing your tf, this one is tried and field tested.
 
@@ -744,4 +742,3 @@ Set a [plugin cache](https://www.terraform.io/docs/commands/cli-config.html). On
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [gherynos_homepage]: https://github.com/gherynos
 [gherynos_avatar]: https://github.com/gherynos.png?size=130
-[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
