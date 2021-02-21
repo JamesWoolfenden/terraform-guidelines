@@ -210,7 +210,26 @@ If using Terraform cloud, the files not to upload to their cloud.
 
 ### .pre-commit-config.yaml
 
-Has a standard set of pre-commit hooks for working with Terraform and AWS. You'll need to install the pre-commit framework https://pre-commit.com/#install. And after that you need to add this file to your new repository **pre-commit-config.yaml**, in the root:
+Has a standard set of pre-commit hooks for working with Terraform and AWS. You'll need to install the pre-commit framework https://pre-commit.com/#install.
+You can modify the default behaviour of Git on a workstation to always implement hooks:
+
+On Windows (Pwsh)
+
+```powershell
+pre-commit init-templatedir $HOME\.git-template
+git config --global init.templateDir $HOME\.git-template
+```
+
+On Nix
+
+```bash
+git config --global init.templateDir ~/.git-template
+pre-commit init-templatedir ~/.git-template
+```
+
+When you clone a file with hooks they are now installed.
+
+And after that you need to add this file (or a similar one) to any new repository **pre-commit-config.yaml**, in the root:
 
 ```yaml
 ---
@@ -736,9 +755,5 @@ Set a [plugin cache](https://www.terraform.io/docs/commands/cli-config.html). On
 
 [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
 
-[![Luca Zanconato][gherynos_avatar]][gherynos_homepage]<br/>[Luca Zanconato][gherynos_homepage]
-
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[gherynos_homepage]: https://github.com/gherynos
-[gherynos_avatar]: https://github.com/gherynos.png?size=130
