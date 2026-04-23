@@ -3,14 +3,33 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
 jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: "**/*.md"
+
   tag:
     name: versioning
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    needs: lint
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
       - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@master
+        uses: anothrNick/github-tag-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
